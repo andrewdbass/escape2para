@@ -1,7 +1,7 @@
 .top-images{
   width: 100vw;
   height: 40vh;
-
+  min-width: 347px;
   background-image: url('https://static.pexels.com/photos/271672/pexels-photo-271672.jpeg');
   background-size: cover;
   /*background-position: center;*/
@@ -39,26 +39,33 @@
   justify-content: space-between;
 }
 .title{
+
+}
+.title__text{
   font-family: Montserrat-Regular;
   font-size: 2.25em;
   color: #4B4B4B;
 }
-.info{
-
-}
-.info__location{
-  /* Hurricane, Uath: */
-  font-family: Roboto-Medium;
-  font-size: 1.5em;
-  color: #4B4B4B;
-  text-align: right;
-}
-.info__rating{
+.title__rating{
   background-image: url('../../assets/5stars.png');
   width: 188px;
   height: 24px;
   background-size: contain;
   margin-top: 8px;
+}
+.rate{
+  text-align: right;
+}
+.rate__price{
+  font-family: Roboto-Regular;
+  font-size: 48px;
+  color: #00A699;
+}
+.rate__text{
+  /* per night: */
+  font-family: Roboto-Light;
+  font-size: 18px;
+  color: #000000;
 }
 .section--02{
   justify-content: space-around;
@@ -133,6 +140,7 @@
 .section--07{
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 80px;
 }
 .review{
   display: flex;
@@ -183,60 +191,9 @@
   justify-content: space-between;
 
 }
-.booking--fixed{
-  position: fixed;
-  top: 32px;
-  right:0;
-  z-index: 105;
-}
-.booking_top-right{
-  margin-left: auto;
-  margin-bottom: -10px;
-  text-align: center;
-}
-.booking__price{
-  font-family: Roboto-Regular;
-  font-size: 40px;
-  color: #00A699;
-}
-.booking__price-subtitle{
-  font-family: Roboto-Light;
-  font-size: 18px;
-  color: #000000;
-}
-.booking__date-label{
-  /* Check In: */
-  font-family: Roboto-Light;
-  font-size: 18px;
-  color: #000000;
-  letter-spacing: 1.72px;
-}
-.booking__date-field{
-  background: #F7F7F7;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 5%;
-  padding-right: 5%;
-
-  height: 50px;
-}
-.booking__date-field__text{
-  font-family: Roboto-Regular;
-  font-size: 18px;
-  color: #434242;
-  letter-spacing: 1.72px;
-}
-.booking__date-field__icon{
-  background-image: url('../../assets/calendar_icon.png');
-  width: 18px;
-  height: 18px;
-  background-size: cover;
-
-}
-.booking__button{
+.booking-button{
   /* Book Now: */
-  font-family: Roboto-Bold;
+  font-family: Roboto-Regular;
   font-size: 24px;
   color: #FFFFFF;
   letter-spacing: 2.3px;
@@ -247,5 +204,9 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.24);
 }
