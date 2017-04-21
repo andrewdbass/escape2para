@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('/assets/montserrat-regular-webfont.woff');
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('/assets/Roboto-Bold-webfont.woff');
+}
+@font-face {
+    font-family: Roboto-Light;
+    src: url('/assets/Roboto-Light-webfont.woff');
+}
+/*.ui-calendar{
+  background-color: white;
+  height: 80px;
+  border: none;
+}*/
+input{
+  border: none;
+}
+input {-webkit-appearance: none; box-shadow: none !important; }
+:-webkit-autofill { color: #fff !important; }

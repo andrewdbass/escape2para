@@ -1,0 +1,183 @@
+<div class = "header">
+  <div class = "logo"></div>
+  <div class = "contact">
+    <div class = "contact__phone">
+        (555)-555-5555
+    </div>
+    <div class = "contact__phone">
+        example@email.com
+    </div>
+  </div>
+</div>
+<div class = "banner">
+  <div class = "banner__text">
+    Vacation Rental homes near Zion Natioal Park
+  </div>
+  <div class = "banner__form">
+    <div class = "banner__date-field">
+      <!-- <input class = "banner__input" type = "text"/> -->
+      <!-- <div class = "banner__field-value">Arrival Date</div> -->
+      <p-calendar  class = "banner__field-value" [(ngModel)]="arrivalDate" placeholder = "Arrival Date" [minDate]="today"></p-calendar>
+      <div class = "banner__calendar-icon"></div>
+    </div>
+    <div class = "banner__date-field">
+      <!-- <input class = "banner__input" type = "text"/> -->
+      <p-calendar  class = "banner__field-value"[(ngModel)]="departureDate" placeholder = "Departure Date" [minDate]="arrivalDate"></p-calendar>
+      <div class = "banner__calendar-icon"></div>
+    </div>
+    <div class = "banner__button">SEARCH</div>
+  </div>
+</div>
+<div class = "grid">
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class = "grid__item">
+    <div class = "item">
+      <a routerLink="/property" routerLinkActive="active">
+        <div class = "item__picture"></div>
+        <div class = "item__label">
+          <div class = "item__label-section">
+            <div class = "item__title">
+              Zion House
+            </div>
+            <div class = "item__price">
+              $155
+            </div>
+          </div>
+          <div class = "item__label-section">
+            <div class = "item__location">
+              Hurricane, Utah
+            </div>
+            <div class = "item__rating"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class = "footer">
+  <div>
+      <strong>Contact Us</strong><br />
+      (555)-555-5555<br />
+      example@email.com<br />
+  </div>
+  <div>
+    Terms of Use
+  </div>
+  <div>
+    © 2017	Escape 2 Paradise. All Rights Reserved
+  </div>
+</div>
