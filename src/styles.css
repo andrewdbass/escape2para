@@ -27,3 +27,9 @@ input{
 }
 input {-webkit-appearance: none; box-shadow: none !important; }
 :-webkit-autofill { color: #fff !important; }
+
+.ui-inputtext--booking{
+  background-color: transparent;
+  background: transparent;
+  width: 60vw;
+}

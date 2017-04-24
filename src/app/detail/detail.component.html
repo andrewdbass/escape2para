@@ -4,9 +4,10 @@
   <div class = "top-images__button top-images__button-right"></div>
   <div class = "top-images__description"></div> -->
 </div>
-<div class = "booking-button">
+<div class = "booking-button" (click) = "toggleModal()">
   REQUEST TO BOOK
 </div>
+<app-booking-modal *ngIf = "showModal" (closeModal)="toggleModal($event)"></app-booking-modal>
 <div class = "section section--light section--01">
   <div class = "title">
     <div class = "title__text">

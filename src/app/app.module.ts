@@ -10,6 +10,7 @@ import { DetailComponent } from './detail/detail.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import {CalendarModule} from 'primeng/primeng';
+import { BookingModalComponent } from './booking-modal/booking-modal.component';
 
 const appRoutes: Routes = [
   {
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    BookingModalComponent
   ],
   imports: [
     BrowserModule,

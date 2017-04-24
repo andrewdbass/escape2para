@@ -1,0 +1,126 @@
+.modal{
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left: 0;
+  width: 100vw;
+  min-width: 346px;
+  height: 100%;
+
+  background-color: white;
+
+  overflow-y: scroll;
+
+}
+.top{
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: rgba(0,0,0,.05);
+}
+.top__button{
+  margin-left: 24px;
+  background-image: url('../../assets/close_icon.png');
+  height: 18px;
+  width: 18px;
+  background-size: cover;
+}
+.top__title{
+  font-family: Roboto-Medium;
+  font-size: 18px;
+  color: #8C8C8C;
+  margin-left:20px;
+}
+.form{
+  margin-top: 34px;
+  width: 70%;
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rate{
+  margin-bottom: 8px;
+  text-align: right;
+}
+.rate__price{
+  font-family: Roboto-Regular;
+  font-size: 40px;
+  color: #00A699;
+  margin-bottom: 4px;
+}
+.rate__text{
+  font-family: Roboto-Light;
+  font-size: 18px;
+  color: #000000;
+}
+.form__label{
+  /* Check In Copy: */
+  font-family: Roboto-Light;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 1.72px;
+  margin-bottom: 8px;
+}
+.form__field{
+  background-color: #F7F7F7;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.form__input{
+  margin-left: 20px;
+}
+.form__input--number{
+  width: 60vh;
+  font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: transparent;
+
+  color: #222222;
+  outline: none;
+  -webkit-appearance:none;
+}
+.form__button{
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: Roboto-Regular;
+  font-size: 24px;
+  color: #FFFFFF;
+  letter-spacing: 2.3px;
+  line-height: 66px;
+
+  background: #00A699;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__icon{
+  background-image: url('../../assets/calendar_icon.png');
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+
+  margin-right: 20px;
+}
+.math{
+  font-family: Roboto-Regular;
+  font-size: 18px;
+  color: #434242;
+  letter-spacing: 2.3px;
+}
+.math__line{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.math__line--total{
+  font-family: Roboto-Medium;
+}
+.math__divider{
+  height: 2px;
+  background-color: #434242;
+  margin-top: 24px
+}

@@ -1,0 +1,71 @@
+<div class = "modal">
+  <div class = "top">
+    <div class = "top__button" (click) = "toggleModal()">
+
+    </div>
+    <div class = "top__title">
+      Booking
+    </div>
+  </div>
+  <div class = "form">
+    <div class = "rate">
+      <div class = "rate__price">
+        ${{dailyRate}}
+      </div>
+      <div class = "rate__text">
+        per night
+      </div>
+    </div>
+    <div class = "form__label">
+      GUESTS
+    </div>
+    <div class = "form__field">
+      <input class = "form__input form__input--number" [(ngModel)]="guests"  type="number" min="1" max="5" placeholder= "Select Guests" (ngModelChange)="onChange($event)">
+      <div class = "guests__icon"></div>
+    </div>
+    <div class = "form__label">
+      CHECK IN
+    </div>
+    <div class = "form__field">
+      <p-calendar  class = "form__input" [(ngModel)]="arrivalDate" placeholder = "Select Date" [minDate]="today" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
+      <div class = "calendar__icon"></div>
+    </div>
+    <div class = "form__label">
+      CHECK OUT
+    </div>
+    <div class = "form__field">
+      <p-calendar  class = "form__input"[(ngModel)]="departureDate" placeholder = "Select Date" [minDate]="arrivalDate" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
+      <div class = "calendar__icon"></div>
+    </div>
+    <div *ngIf = "ready" class = "math">
+      <div class = "math__line">
+        <div class = "math__text">
+          ${{dailyRate}} X {{days}} nights
+        </div>
+        <div class =  "math__amount">
+          ${{dailyRate * days}}
+        </div>
+      </div>
+      <div class = "math__line">
+        <div class = "math__text">
+          Service Fee
+        </div>
+        <div class =  "math__amount">
+          ${{serviceFee}}
+        </div>
+      </div>
+      <div class = "math__divider"></div>
+      <div class = "math__line math__line--total">
+        <div class = "math__text">
+          Total
+        </div>
+        <div class =  "math__amount">
+          ${{total}}
+        </div>
+      </div>
+    </div>
+    <div class = "form__button">
+      Book Now
+    </div>
+  </div>
+</div>

@@ -15,9 +15,13 @@ export class DetailComponent implements OnInit {
       this.bookingStyle = ['booking'];
     }
   }
-  public bookingStyle = ["booking"]
+  public bookingStyle = ["booking"];
+  public showModal = false;
   constructor() { }
 
+  private toggleModal(){
+    this.showModal = !this.showModal;
+  }
   ngOnInit() {
   }
 
