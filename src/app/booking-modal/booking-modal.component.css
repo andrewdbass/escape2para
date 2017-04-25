@@ -105,6 +105,14 @@
 
   margin-right: 20px;
 }
+.guests__icon{
+  background-image: url('../../assets/guests_icon.png');
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+
+  margin-right: 20px;
+}
 .math{
   font-family: Roboto-Regular;
   font-size: 18px;
