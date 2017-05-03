@@ -32,138 +32,22 @@
   <div class = "banner__bottom-spacer"></div>
 </div>
 <div class = "grid">
-  <div class = "grid__item">
+
+  <div *ngFor =  "let property of properties" class = "grid__item">
     <div class = "item">
       <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
+        <div class = "item__picture" [ngStyle] = "{'background-image' : 'url('+property.images[0].image+')'}"></div>
         <div class = "item__label">
           <div class = "item__label-section">
             <div class = "item__title">
-              Zion House
+              {{property.title}}
             </div>
             <div class = "item__price">
-              $155
+              ${{property.default_rate}}
             </div>
           </div>
           <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
-            <div class = "item__rating"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class = "grid__item">
-    <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
-        <div class = "item__label">
-          <div class = "item__label-section">
-            <div class = "item__title">
-              Zion House
-            </div>
-            <div class = "item__price">
-              $155
-            </div>
-          </div>
-          <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
-            <div class = "item__rating"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class = "grid__item">
-    <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
-        <div class = "item__label">
-          <div class = "item__label-section">
-            <div class = "item__title">
-              Zion House
-            </div>
-            <div class = "item__price">
-              $155
-            </div>
-          </div>
-          <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
-            <div class = "item__rating"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class = "grid__item">
-    <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
-        <div class = "item__label">
-          <div class = "item__label-section">
-            <div class = "item__title">
-              Zion House
-            </div>
-            <div class = "item__price">
-              $155
-            </div>
-          </div>
-          <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
-            <div class = "item__rating"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class = "grid__item">
-    <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
-        <div class = "item__label">
-          <div class = "item__label-section">
-            <div class = "item__title">
-              Zion House
-            </div>
-            <div class = "item__price">
-              $155
-            </div>
-          </div>
-          <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
-            <div class = "item__rating"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class = "grid__item">
-    <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
-        <div class = "item__picture"></div>
-        <div class = "item__label">
-          <div class = "item__label-section">
-            <div class = "item__title">
-              Zion House
-            </div>
-            <div class = "item__price">
-              $155
-            </div>
-          </div>
-          <div class = "item__label-section">
-            <div class = "item__location">
-              Hurricane, Utah
-            </div>
+
             <div class = "item__rating"></div>
           </div>
         </div>
