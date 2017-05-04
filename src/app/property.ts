@@ -19,5 +19,11 @@ export class Property {
   reviews: [{}];
   special_rates: [{}];
   bookings: [{}];
-  unavailable_dates: [{}];
+  unavailable_dates: UnavailableDate[];
+}
+export class UnavailableDate {
+  booking: number;
+  date: string;
+  id: number;
+  prop: number;
 }

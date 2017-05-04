@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Property } from "../property"
+import { PropertyService } from "../property.service"
 
 @Component({
   selector: 'app-booking-modal',
@@ -8,6 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class BookingModalComponent implements OnInit {
   @Output() closeModal = new EventEmitter<boolean>()
   constructor() { }
+  @Input() property: Property;
   public today = new Date();
   public arrivalDate: Date;
   public departureDate: Date;
@@ -17,6 +20,7 @@ export class BookingModalComponent implements OnInit {
   public dailyRate = 155;
   public serviceFee = 99;
   public total = 0
+  public dates= [];
   public onChange($event){
     if (typeof this.guests != 'undefined' && typeof this.arrivalDate != 'undefined' && typeof this.departureDate != 'undefined'){
       let timeDiff = Math.abs(this.arrivalDate.getTime() - this.departureDate.getTime());
@@ -29,6 +33,8 @@ export class BookingModalComponent implements OnInit {
     this.closeModal.emit(true)
   }
   ngOnInit() {
+    this.dates.push(new Date(this.property.unavailable_dates[0].date))
+    console.log(this.dates)
   }
 
 }

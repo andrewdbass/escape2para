@@ -1,4 +1,4 @@
-<div class = "modal">
+<div class = "booking__modal">
   <div class = "top">
     <div class = "top__button" (click) = "toggleModal()">
 
@@ -10,7 +10,7 @@
   <div class = "form">
     <div class = "rate">
       <div class = "rate__price">
-        ${{dailyRate}}
+        ${{property.default_rate}}
       </div>
       <div class = "rate__text">
         per night
@@ -20,10 +20,8 @@
       GUESTS
     </div>
     <div class = "form__field">
-      <input class = "form__input form__input--number" [(ngModel)]="guests"  type="number" min="1" max="5" placeholder= "Select Guests" (ngModelChange)="onChange($event)">
+      <input class = "form__input form__input--number" [(ngModel)]="guests"  type="number" min="1" [max]="property.guests" placeholder= "Select Guests" (ngModelChange)="onChange($event)">
       <div class = "guests__icon"></div>
-      <!-- <div class = "calendar__icon"></div> -->
-
     </div>
     <div class = "form__label">
       CHECK IN
@@ -36,16 +34,16 @@
       CHECK OUT
     </div>
     <div class = "form__field">
-      <p-calendar  class = "form__input"[(ngModel)]="departureDate" placeholder = "Select Date" [minDate]="arrivalDate" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
+      <p-calendar  class = "form__input" [disabledDates] = "this.dates" [(ngModel)]="departureDate" placeholder = "Select Date" [minDate]="arrivalDate" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
       <div class = "calendar__icon"></div>
     </div>
     <div *ngIf = "ready" class = "math">
       <div class = "math__line">
         <div class = "math__text">
-          ${{dailyRate}} X {{days}} nights
+          ${{property.default_rate}} X {{days}} nights
         </div>
         <div class =  "math__amount">
-          ${{dailyRate * days}}
+          ${{property.default_rate * days}}
         </div>
       </div>
       <div class = "math__line">
