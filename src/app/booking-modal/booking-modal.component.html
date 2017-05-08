@@ -27,14 +27,14 @@
       CHECK IN
     </div>
     <div class = "form__field">
-      <p-calendar  class = "form__input" [(ngModel)]="arrivalDate" placeholder = "Select Date" [minDate]="today" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
+      <p-calendar  [disabledDates] = "this.unavailable_dates" class = "form__input" [(ngModel)]="arrivalDate" placeholder = "Select Date" [minDate]="today" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
       <div class = "calendar__icon"></div>
     </div>
     <div class = "form__label">
       CHECK OUT
     </div>
     <div class = "form__field">
-      <p-calendar  class = "form__input" [disabledDates] = "this.dates" [(ngModel)]="departureDate" placeholder = "Select Date" [minDate]="arrivalDate" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
+      <p-calendar  [disabledDates] = "this.unavailable_dates" class = "form__input" [(ngModel)]="departureDate" placeholder = "Select Date" [minDate]="arrivalDate" inputStyleClass = "ui-inputtext--booking" (ngModelChange)="onChange($event)"></p-calendar>
       <div class = "calendar__icon"></div>
     </div>
     <div *ngIf = "ready" class = "math">
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class = "form__button">
+    <div class = "form__button" (click) = "createBooking()">
       Book Now
     </div>
   </div>

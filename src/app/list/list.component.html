@@ -27,15 +27,23 @@
       <p-calendar  class = "banner__field-value"[(ngModel)]="departureDate" placeholder = "Departure Date" [minDate]="arrivalDate"></p-calendar>
       <div class = "banner__calendar-icon"></div>
     </div>
-    <div class = "banner__button">SEARCH</div>
+    <div class = "banner__button" (click) = "search()">SEARCH</div>
   </div>
   <div class = "banner__bottom-spacer"></div>
 </div>
-<div class = "grid">
+<div class = "empty-state-message"  *ngIf="properties?.length === 0">
+  <div class = "empty-state-message__icon">
+
+  </div>
+  <div class = "empty-state-message__text">
+    Sorry, all of our properties are booked during that time.
+  </div>
+</div>
+<div class = "grid" *ngIf="properties?.length>0">
 
   <div *ngFor =  "let property of properties" class = "grid__item">
     <div class = "item">
-      <a routerLink="/property" routerLinkActive="active">
+      <a [routerLink] = "['/property', property.id]" routerLinkActive="active">
         <div class = "item__picture" [ngStyle] = "{'background-image' : 'url('+property.images[0].image+')'}"></div>
         <div class = "item__label">
           <div class = "item__label-section">

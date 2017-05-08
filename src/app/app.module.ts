@@ -23,9 +23,11 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
 
 import {SafePipe} from './safe.pipe';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const appRoutes: Routes = [
   {
-    path: 'property',
+    path: 'property/:id',
     component: DetailComponent
   },
   {
@@ -50,9 +52,8 @@ const appRoutes: Routes = [
     CalendarModule,
     GalleriaModule,
     CarouselModule.forRoot(),
-    AgmCoreModule.forRoot({
-      apiKey: "AIzaSyDNWO6s6HKZiArAdVuCylCLD0LEEmarHc4"
-    })
+    BrowserAnimationsModule
+
   ],
   providers: [
     PropertyService

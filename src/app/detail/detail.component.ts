@@ -4,6 +4,8 @@ import { PropertyService } from "../property.service"
 import {SebmGoogleMap} from 'angular2-google-maps/core';
 import {SafePipe} from '../safe.pipe';
 
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
@@ -25,18 +27,20 @@ export class DetailComponent implements OnInit {
   public propertyLoaded = false
   lat: number = 51.678418;
   lng: number = 7.809007;
-  constructor(private propertyService: PropertyService) {}
+  constructor(private propertyService: PropertyService, private route: ActivatedRoute) {}
 
   private toggleModal(){
     this.showModal = !this.showModal;
   }
   ngOnInit() {
-    this.propertyService.getProperty(3).subscribe((res
-    )=>{
-      console.log(res)
-      this.property = res
-      this.propertyLoaded = true
-    })
+    this.route.params.subscribe(params => {
+       let id = params['id'];
+       this.propertyService.getProperty(id).subscribe((res
+       )=>{
+         console.log(res)
+         this.property = res
+         this.propertyLoaded = true
+       })
+    });
   }
-
 }

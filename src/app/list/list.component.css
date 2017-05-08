@@ -170,7 +170,7 @@
 
 }
 .item {
-  min-height: 400px;
+  min-height: 375px
 }
 .item__picture {
   width: 100%;
@@ -233,4 +233,33 @@ a{
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;*/
+}
+.empty-state-message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:42px;
+
+  margin-top: 72px;
+  margin-bottom: 72px;
+
+}
+.empty-state-message__icon{
+  color: rgba(0, 0, 0, 0.36);
+  background-image: url('../../assets/house_icon.png');
+  width: 196px;
+  height: 175px;
+  background-size: cover;
+  margin-bottom: 24px;
+}
+.empty-state-message__text{
+  /* Sorry, all of our pr: */
+  max-width: 400px;
+  text-align: center;
+  font-family: Montserrat-Bold;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.36);
+  letter-spacing: 2.96px;
+  line-height: 36px;
 }

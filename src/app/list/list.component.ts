@@ -28,5 +28,11 @@ export class ListComponent implements OnInit {
       console.log(this.properties)
     })
   }
+  search() {
+    this.propertyService.getProperties(this.arrivalDate.toISOString(), this.departureDate.toISOString()).subscribe((res)=>{
+      this.properties = res
+      console.log(this.properties)
+    })
+  }
 
 }
