@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Property } from "../property"
 import { PropertyService } from "../property.service"
-import {SebmGoogleMap} from 'angular2-google-maps/core';
 import {SafePipe} from '../safe.pipe';
 
 import { ActivatedRoute } from '@angular/router';
@@ -29,7 +28,7 @@ export class DetailComponent implements OnInit {
   lng: number = 7.809007;
   constructor(private propertyService: PropertyService, private route: ActivatedRoute) {}
 
-  private toggleModal(){
+  public toggleModal(){
     this.showModal = !this.showModal;
   }
   ngOnInit() {
