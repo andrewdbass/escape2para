@@ -19,7 +19,7 @@ import { BookingModalComponent } from './booking-modal/booking-modal.component';
 import { PropertyService } from "./property.service"
 
 const GoogleAPIKey = "AIzaSyDNWO6s6HKZiArAdVuCylCLD0LEEmarHc4"
-import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 import {SafePipe} from './safe.pipe';
 
