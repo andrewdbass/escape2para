@@ -7,8 +7,8 @@ import 'rxjs/add/operator/map';
 import { Property } from './property';
 @Injectable()
 export class PropertyService {
-  private propertiesUrl = 'http://localhost:8000/api/properties/';  // URL to web API
-  private bookingUrl = 'http://localhost:8000/api/booking/';  // URL to web API
+  private propertiesUrl = 'http://104.236.84.211/api/properties/';  // URL to web API
+  private bookingUrl = 'http://104.236.84.211/api/booking/';  // URL to web API
   constructor (private http: Http) {}
   getProperties(startDate?:any, endDate?:any): Observable<Property[]> {
     let params: URLSearchParams = new URLSearchParams();
