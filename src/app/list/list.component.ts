@@ -22,6 +22,10 @@ export class ListComponent implements OnInit {
   public arrivalDate: Date;
   public departureDate: Date;
   public properties: Property[]
+  public getImageUrl(str){
+    let rootUrl = "http://104.236.84.211/"
+    return rootUrl + str.substr(str.indexOf("media"))
+  }
   ngOnInit() {
     this.propertyService.getProperties().subscribe((res)=>{
       this.properties = res

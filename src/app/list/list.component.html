@@ -44,7 +44,7 @@
   <div *ngFor =  "let property of properties" class = "grid__item">
     <div class = "item">
       <a [routerLink] = "['/property', property.id]" routerLinkActive="active">
-        <div class = "item__picture" [ngStyle] = "{'background-image' : 'url('+property.images[0].image+')'}"></div>
+        <div class = "item__picture" [ngStyle] = "{'background-image' : 'url('+getImageUrl(property.images[0].image)+')'}"></div>
         <div class = "item__label">
           <div class = "item__label-section">
             <div class = "item__title">

@@ -27,7 +27,10 @@ export class DetailComponent implements OnInit {
   lat: number = 51.678418;
   lng: number = 7.809007;
   constructor(private propertyService: PropertyService, private route: ActivatedRoute) {}
-
+  public getImageUrl(str){
+    let rootUrl = "http://104.236.84.211/"
+    return rootUrl + str.substr(str.indexOf("media"))
+  }
   public toggleModal(){
     this.showModal = !this.showModal;
   }

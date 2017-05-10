@@ -1,6 +1,6 @@
 <carousel class = "top-images">
   <slide class = "top-images" *ngFor="let image of property?.images">
-    <img [src]="image.image" [alt]="image.text" >
+    <img [src]="getImageUrl(image.image)" [alt]="image.text" >
   </slide>
 </carousel>
 <div class = "booking-button" (click) = "toggleModal()">
@@ -69,7 +69,7 @@
   </div>
   <div  *ngFor = "let review of property?.reviews" class = "review">
     <div class = "review__person">
-      <div class = "review__picture" [ngStyle]="{'background-image' : 'url('+review.image+')'}"></div>
+      <div class = "review__picture" [ngStyle]="{'background-image' : 'url('+getImageUrl(review.image)+')'}"></div>
       <div class = "review__name">{{review.name}}</div>
     </div>
     <div class =  "review__text">
