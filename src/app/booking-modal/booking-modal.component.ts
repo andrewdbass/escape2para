@@ -33,7 +33,7 @@ export class BookingModalComponent implements OnInit {
   }
   public toggleModal(){
     this.closeModal.emit(true)
-    location.reload();
+    // location.reload();
   }
   public createBooking(){
     let booking = {
